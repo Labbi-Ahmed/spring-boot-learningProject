@@ -1,0 +1,20 @@
+package com.leanr.jpajdbc.repogitory;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class MyJdbcRepository {
+	
+	private JdbcTemplate springJdbcTemplete;
+	
+	private static String INSERT_INTO = 
+			"""
+				INSERT INTO course(id,name,author)
+				value(1,'Labbi Ahmed', 'Lipu');
+			""";
+	
+	public void insert() {
+		springJdbcTemplete.update(INSERT_INTO);
+	}
+}

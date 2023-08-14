@@ -1,0 +1,5 @@
+package com.leanr.jpajdbc.course;
+
+public class Course {
+
+}

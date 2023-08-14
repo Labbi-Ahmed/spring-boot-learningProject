@@ -1,0 +1,5 @@
+package com.leanr.jpajdbc.repogitory;
+
+public class MyJdbcCommandLineRunner {
+
+}
