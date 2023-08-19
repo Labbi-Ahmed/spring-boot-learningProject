@@ -7,11 +7,13 @@
 	<body>	
 		<div>
 			<h1>Login Page</h1>
+			<pre>${errorMassage }</pre>
 			<form method="post">
 				Name: <input type="text" name="name">
 				<input type="password" name="password">
 				<input type="submit">
 			</form>
+			
 			
 		</div>
 		
