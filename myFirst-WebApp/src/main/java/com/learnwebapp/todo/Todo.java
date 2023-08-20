@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Todo {
 
 	private int id;
-	private String username;
+	private String userName;
 	private String description; 
 	private LocalDate targetDate;
 	private boolean done;
@@ -14,10 +14,10 @@ public class Todo {
 		super();
 	}
 
-	public Todo(int id, String username, String description, LocalDate targetDate, boolean done) {
+	public Todo(int id, String userName, String description, LocalDate targetDate, boolean done) {
 		super();
 		this.id = id;
-		this.username = username;
+		this.userName = userName;
 		this.description = description;
 		this.targetDate = targetDate;
 		this.done = done;
@@ -31,12 +31,12 @@ public class Todo {
 		this.id = id;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserName(String username) {
+		this.userName = userName;
 	}
 
 	public String getDescription() {
@@ -65,7 +65,7 @@ public class Todo {
 
 	@Override
 	public String toString() {
-		return "Todo [id=" + id + ", username=" + username + ", description=" + description + ", targetDate="
+		return "Todo [id=" + id + ", userName=" + userName + ", description=" + description + ", targetDate="
 				+ targetDate + ", done=" + done + "]";
 	}
 	
