@@ -2,10 +2,13 @@ package com.learnwebapp.todo;
 
 import java.time.LocalDate;
 
+import jakarta.validation.constraints.Size;
+
 public class Todo {
 
 	private int id;
 	private String userName;
+	@Size(min=10, message="Enter Atleast 10 characters")
 	private String description; 
 	private LocalDate targetDate;
 	private boolean done;
@@ -44,7 +47,7 @@ public class Todo {
 	}
 
 	public void setDescription(String description) {
-		this.description = description;
+		this.description = description.trim();
 	}
 
 	public LocalDate getTargetDate() {
@@ -55,7 +58,7 @@ public class Todo {
 		this.targetDate = targetDate;
 	}
 
-	public boolean isDone() {
+	public boolean getDone() {
 		return done;
 	}
 
