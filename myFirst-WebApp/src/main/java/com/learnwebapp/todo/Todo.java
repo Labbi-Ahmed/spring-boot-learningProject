@@ -2,11 +2,19 @@ package com.learnwebapp.todo;
 
 import java.time.LocalDate;
 
+import jakarta.annotation.Generated;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 
+@Entity
 public class Todo {
 
+	@Id
+	@GeneratedValue
 	private int id;
+	
 	private String userName;
 	@Size(min=10, message="Enter Atleast 10 characters")
 	private String description; 
@@ -38,7 +46,7 @@ public class Todo {
 		return userName;
 	}
 
-	public void setUserName(String username) {
+	public void setUserName(String userName) {
 		this.userName = userName;
 	}
 

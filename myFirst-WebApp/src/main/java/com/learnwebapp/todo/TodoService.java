@@ -19,7 +19,7 @@ public class TodoService {
 		
 		todos.add(new Todo(++cnt,"labib", "Learn Spring", LocalDate.now().plusYears(2), false));
 
-		todos.add(new Todo(++cnt,"habib", "Learn Mysql", LocalDate.now().plusYears(3), false));
+		todos.add(new Todo(++cnt,"labib", "Learn Mysql", LocalDate.now().plusYears(3), false));
 
 		todos.add(new Todo(++cnt,"labib", "Learn AWS", LocalDate.now().plusYears(4), false));
 
@@ -31,9 +31,9 @@ public class TodoService {
 		todos.add(new Todo(++cnt, userName, description, targetDate, done));
 	}
 	
-	public List<Todo> findByUsername(){
-		//List<Todo> newTodos = todo.stream().filter(todo-> userName.equals(todo.getUserName())).toList();
-		return todos;
+	public List<Todo> findByUsername( String userName){
+		List<Todo> newTodos = todos.stream().filter(todo-> userName.equals(todo.getUserName())).toList();
+		return newTodos;
 	}
 
 	public void deleteById(int id) {

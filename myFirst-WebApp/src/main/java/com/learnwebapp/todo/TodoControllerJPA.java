@@ -14,13 +14,13 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jakarta.validation.Valid;
 
-//@Controller
+@Controller
 @SessionAttributes("name")
-public class TodoController {
+public class TodoControllerJPA {
 
-	private TodoService todoService;
+	private TodoRepositoryJPA todoService;
 	
-	public TodoController(TodoService todoService) {
+	public TodoControllerJPA(TodoRepositoryJPA todoService) {
 		this.todoService = todoService;
 	}
 	
@@ -28,8 +28,7 @@ public class TodoController {
 	@RequestMapping("list-todos")
 	public String listAllTodos(ModelMap model) {
 		String userName = getLoggedInUserName(model);
-		List<Todo> todos =  todoService.findByUsername(userName);
-		
+		List<Todo> todos =  todoService.findByUserName(userName);
 		model.addAttribute("todos", todos);
 		return "listTodos";
 	}
@@ -49,7 +48,8 @@ public class TodoController {
 			return "todo";
 		}
 		String userName = (String)model.get("name");
-		todoService.addTodo(userName, todo.getDescription(), todo.getTargetDate(), false);		
+		todo.setUserName(userName);
+		todoService.save(todo);
 		return "redirect:list-todos";
 	}
 	
@@ -66,7 +66,7 @@ public class TodoController {
 	@RequestMapping(value="update-todo", method = RequestMethod.GET)
 		public String showUpdateTodoPage(@RequestParam int id, ModelMap model) {
 			
-			Todo todo = todoService.findById(id);
+			Todo todo = todoService.findById(id).get();
 			model.addAttribute("todo", todo);
 			return "todo"; 
 		}
@@ -79,7 +79,7 @@ public class TodoController {
 			}
 			String userName = (String)model.get("name");
 			todo.setUserName(userName);
-			todoService.updateTodo(todo);		
+			todoService.save(todo);		
 			return "redirect:list-todos";
 		}
 		
