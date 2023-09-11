@@ -1,5 +1,0 @@
-package com.leanr.jpajdbc.repogitory;
-
-public class MyJdbcRepository {
-
-}

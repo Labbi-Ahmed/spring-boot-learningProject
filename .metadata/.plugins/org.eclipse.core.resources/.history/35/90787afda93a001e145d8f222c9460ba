@@ -1,5 +1,0 @@
-package com.leanr.jpajdbc.course.repository.springJpa;
-
-public interface MySpringJpaRepository {
-
-}

@@ -1,7 +1,12 @@
 # Use an official OpenJDK runtime as a parent image
+FROM maven:3.8.2-jdk-17 As build
+COPY . .
+RUN mvn clean package -Pprod -DskipTests
+
+
 FROM openjdk:17-jdk-alpine
 
-#RUN mvn clean install
+
 # Set the working directory inside the container
 WORKDIR /app
 
