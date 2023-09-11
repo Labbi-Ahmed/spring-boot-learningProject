@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.learnrestapi.SpringBootRestApiApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.04 s - in com.learnrestapi.SpringBootRestApiApplicationTests
