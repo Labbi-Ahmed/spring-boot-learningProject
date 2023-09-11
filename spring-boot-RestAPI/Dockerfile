@@ -1,7 +1,7 @@
 # Use an official OpenJDK runtime as a parent image
 FROM openjdk:17-jdk-alpine
 
-RUN mvn clean install
+#RUN mvn clean install
 # Set the working directory inside the container
 WORKDIR /app
 
