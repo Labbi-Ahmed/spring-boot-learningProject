@@ -1,7 +1,7 @@
 
 # Autheticate By user and pass
-Authentication user : labib
-Authentication Passowrd: 1234
+1. Authentication user : labib
+2. Authentication Passowrd: 1234
 
 # The RestAPI url are 
 1. https://myfirst-spring-boot-backend-app.onrender.com/api/v1/users ( it a GET request for retriveAllUsers
