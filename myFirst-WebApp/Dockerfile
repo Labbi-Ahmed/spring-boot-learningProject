@@ -11,7 +11,7 @@ FROM openjdk:17-jdk-alpine
 WORKDIR /app
 
 # Copy the compiled JAR file into the container at /app
-COPY target/*.jar /app/app.jar
+COPY target/myFirst-WebApp-0.0.1-SNAPSHOT.jar /app/app.jar
 
 # Expose port 8080 for the Spring Boot application
 EXPOSE 8080
