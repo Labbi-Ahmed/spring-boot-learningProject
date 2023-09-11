@@ -1826,3 +1826,36 @@ java.util.concurrent.TimeoutException
 	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
 	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jface 2 0 2023-09-12 02:32:15.417
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-09-12 02:32:15.417
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-09-12 02:35:01.813
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:168)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:281)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:106)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	at java.base/java.lang.Thread.run(Thread.java:833)
