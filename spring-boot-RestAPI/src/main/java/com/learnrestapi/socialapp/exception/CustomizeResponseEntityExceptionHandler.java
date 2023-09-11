@@ -1,6 +1,5 @@
 package com.learnrestapi.socialapp.exception;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import org.springframework.http.HttpHeaders;
