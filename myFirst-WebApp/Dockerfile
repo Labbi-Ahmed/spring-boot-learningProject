@@ -49,10 +49,10 @@ FROM openjdk:17-jdk-alpine
 WORKDIR /app
 
 # Copy the compiled JAR file from the build stage to the runtime stage
-COPY --from=build /app/target/myFirst-WebApp-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /app/target/myFirst-WebApp-0.0.1-SNAPSHOT.war app.war
 
 # Expose the port that your Spring Boot application will run on
 EXPOSE 8080
 
 # Define the entry point for your application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.war"]
