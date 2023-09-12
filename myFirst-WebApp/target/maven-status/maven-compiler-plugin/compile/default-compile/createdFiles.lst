@@ -4,5 +4,6 @@ com/learnwebapp/todo/TodoRepositoryJPA.class
 com/learnwebapp/todo/TodoControllerJPA.class
 com/learnwebapp/security/SpringSecurityConfiguration.class
 com/learnwebapp/todo/Todo.class
+com/learnwebapp/helloController/MyController.class
 com/learnwebapp/todo/TodoService.class
 com/learnwebapp/MyFirstWebAppApplication.class
