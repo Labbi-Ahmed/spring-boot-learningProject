@@ -8,7 +8,7 @@ WORKDIR /app
 COPY pom.xml .
 
 # Download and install Maven dependencies (this step is cached if the pom.xml file hasn't changed)
-RUN mvn dependency:go-offline
+#RUN mvn dependency:go-offline
 
 # Copy the application source code into the container
 COPY src/ /app/src/
