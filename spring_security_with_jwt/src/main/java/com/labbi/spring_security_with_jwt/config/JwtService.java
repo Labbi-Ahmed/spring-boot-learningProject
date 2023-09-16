@@ -25,11 +25,14 @@ public class JwtService {
 		return extractClaim(token, Claims::getSubject);
 	}
 	
+	
+	// Generate the token with user details 
 	public String generateToken( UserDetails userDetails) {
 		
 		return generateToken(new HashMap<>()  , userDetails) ;
 	}
 	
+	// Generate the token with user details and extraClaims
 	public String generateToken(Map<String, Object> extraClaims, UserDetails userDetails) {
 		return Jwts
 				.builder()
