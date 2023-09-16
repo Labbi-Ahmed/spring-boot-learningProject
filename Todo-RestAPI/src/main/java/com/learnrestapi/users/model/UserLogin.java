@@ -1,4 +1,4 @@
-package com.learnrestapi.model;
+package com.learnrestapi.users.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

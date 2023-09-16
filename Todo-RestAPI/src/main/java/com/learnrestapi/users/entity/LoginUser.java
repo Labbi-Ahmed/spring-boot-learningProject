@@ -1,4 +1,4 @@
-package com.learnrestapi.entity;
+package com.learnrestapi.users.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -7,18 +7,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "user")
-public class UserRegistation  {
-
-	@Id
-	private String name;
+@NoArgsConstructor
+@Entity
+public class LoginUser {
 	
+	@Id
 	private String email;
-
-	private String password;
-
-	private String role = "USER";
+	private boolean status;
 
 }

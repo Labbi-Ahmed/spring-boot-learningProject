@@ -1,4 +1,4 @@
-package com.learnrestapi.model;
+package com.learnrestapi.common;
 
 import lombok.Data;
 

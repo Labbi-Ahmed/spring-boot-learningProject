@@ -1,4 +1,4 @@
-package com.learnrestapi.entity;
+package com.learnrestapi.todo.model;
 
 import java.time.LocalDate;
 
@@ -13,14 +13,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="Todos")
-public class UserTodo {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-	
-	private String email;
+public class UserTodoDAO {
+		
 	private String descripton;
 	private LocalDate creationDate;
 	private LocalDate targetDate;
